@@ -49,7 +49,7 @@ using DepsMap = std::map<std::string, std::string>;
 
 std::string getLastErrorString()
 {
-    LPTSTR lpMsgBuf;
+  LPTSTR lpMsgBuf = nullptr;
     DWORD dw = GetLastError();
     FormatMessage(
         FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
